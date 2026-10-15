@@ -2436,7 +2436,7 @@ void PLAYER_ARCADE::Control(INPUT* input)
         else
         {
             const unsigned int savedControlMode = static_cast<unsigned int>(m_controlMode);
-            m_controlMode = 3;
+            m_controlMode = classId == 3629u ? 6 : 3;
             PlayerSubobject()->ControlFlagman(input);
             m_controlMode = static_cast<int>(savedControlMode);
             SPRITE* const carSprite = playerInterface->Flagman();

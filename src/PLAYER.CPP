@@ -253,7 +253,7 @@ void PLAYER::ControlFlagman(INPUT* input)
     float inputX = inputMouse.x;
     float inputY = inputMouse.y;
 
-    if (static_cast<unsigned int>(m_controlMode) != 3u)
+    if (m_controlMode != 3 && m_controlMode != 6)
     {
         if (input->GetAction(IA_MOVE_TO_COORD) != 0)
         {
@@ -321,7 +321,7 @@ void PLAYER::ControlFlagman(INPUT* input)
     unsigned char desiredDirection = 0u;
     bool directionalInput = false;
 
-    if (static_cast<unsigned int>(m_controlMode) != 3u)
+    if (m_controlMode != 3 && m_controlMode != 6)
     {
         if (static_cast<unsigned int>(m_controlMode) == 4u) desiredDirection = m_flagman.m_value->m_direction.value;
 
