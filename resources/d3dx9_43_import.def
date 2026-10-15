@@ -1,0 +1,3 @@
+LIBRARY d3dx9_43.dll
+EXPORTS
+    _D3DXCreateFontA@48 = D3DXCreateFontA
